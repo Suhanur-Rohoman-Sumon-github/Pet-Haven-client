@@ -1,4 +1,4 @@
-import BottomNav from '../../../components/Navbar/bottomNav';
+import BottomNav from '../../../components/Navbar/BottomNav';
 import MiddleNav from '../../../components/Navbar/MiddleNav';
 import TopNav from '../../../components/Navbar/TopNav';
 
