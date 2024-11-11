@@ -6,7 +6,7 @@ const App = () => {
     <div className="flex justify-center items-center">
       <div>
         <h1 className="text-red-500 underline ">this is my app bro</h1>
-        <Button>click me</Button>
+        <Button className="bg-green-500">click me</Button>
       </div>
     </div>
   );
