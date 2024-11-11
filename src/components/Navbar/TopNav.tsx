@@ -13,7 +13,7 @@ import { GoGitCompare } from 'react-icons/go';
 
 const TopNav = () => {
   return (
-    <div className="p-4 bg-gray-50 flex justify-between items-center">
+    <div className="px-5  py-3 bg-gray-50 flex justify-between items-center">
       <div className="w-fit flex items-center gap-1 ">
         <LiaPagerSolid className="text-2xl" />{' '}
         <span className="text-sm">
