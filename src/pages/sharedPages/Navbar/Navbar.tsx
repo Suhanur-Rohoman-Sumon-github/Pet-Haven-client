@@ -1,3 +1,4 @@
+import BottomNav from '../../../components/Navbar/bottomNav';
 import MiddleNav from '../../../components/Navbar/MiddleNav';
 import TopNav from '../../../components/Navbar/TopNav';
 
@@ -6,6 +7,8 @@ const Navbar = () => {
     <nav className="bg-primary container">
       <TopNav />
       <MiddleNav />
+      <hr />
+      <BottomNav />
     </nav>
   );
 };

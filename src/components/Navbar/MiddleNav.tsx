@@ -3,7 +3,7 @@ import { FaCartShopping } from 'react-icons/fa6';
 
 const MiddleNav = () => {
   return (
-    <div className="px-5 flex justify-between items-center py-8 text-white">
+    <div className="px-5 flex justify-between items-center  py-8 text-white">
       <div>
         {/* <Link to="/"> */}
         <h3 className="text-3xl font-semibold">Pet-Haven</h3>
