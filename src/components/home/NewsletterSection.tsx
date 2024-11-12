@@ -2,7 +2,7 @@ import { IoMdMailOpen } from 'react-icons/io';
 
 const NewsletterSection = () => {
   return (
-    <div className="mb-[100px] px-5  lg:px-12 bg-primary h-24 p-5 lg:flex justify-between items-center gap-10">
+    <div className="mb-[50px] px-5  lg:px-12 bg-primary h-24 p-5 lg:flex justify-between items-center gap-10">
       <h3 className="flex text-3xl font-semibold text-white items-center gap-2">
         <IoMdMailOpen /> <span>Sign Up for Newsletter</span>
       </h3>
