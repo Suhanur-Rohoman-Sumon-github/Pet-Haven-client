@@ -1,6 +1,12 @@
 import { FaExchangeAlt, FaHeart } from 'react-icons/fa';
-
-const ProductCard = ({ product }) => {
+type TProduct = {
+  id: number;
+  name: string;
+  category: string;
+  price: number;
+  image: string; // Assuming the image will be a URL in string format
+};
+const ProductCard = ({ product }: { product: TProduct }) => {
   return (
     <div
       key={product.id}

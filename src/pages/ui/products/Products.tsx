@@ -38,7 +38,7 @@ const Products = () => {
     },
   ];
 
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('');
   const categories = ['Dog', 'Cat', 'Bird', 'Small Animal'];
 
   const filteredProducts = selectedCategory
@@ -63,9 +63,9 @@ const Products = () => {
             </li>
           ))}
           <li
-            onClick={() => setSelectedCategory(null)}
+            onClick={() => setSelectedCategory('')}
             className={`cursor-pointer mb-2 p-2 rounded ${
-              selectedCategory === null ? 'bg-blue-500 text-white' : ''
+              selectedCategory == '' ? 'bg-blue-500 text-white' : ''
             }`}
           >
             All
