@@ -4,7 +4,7 @@ import TopNav from '../../../components/Navbar/TopNav';
 
 const Navbar = () => {
   return (
-    <nav className="bg-primary  container mx-auto">
+    <nav className="  container mx-auto">
       <TopNav />
       <MiddleNav />
       <hr />

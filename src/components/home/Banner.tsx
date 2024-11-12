@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
   return (
     <Container>
-      <div className="min-h-[70vh] gap-10 flex justify-center  ">
+      <div className="min-h-[480px] gap-10 flex justify-center  ">
         <div className="w-1/6 bg-white shadow-md rounded-md p-5">
           <ul className=" space-y-4 text-xs">
             <li className="hover:text-primary transition-all duration-200">
@@ -51,9 +51,9 @@ const Banner = () => {
             </li>
           </ul>
         </div>
-        <div className="h-full w-[calc(100%-14%)]">
+        <div className=" w-[calc(100%-14%)]">
           <img
-            className="h-[70vh] rounded-md w-full"
+            className="h-[480px] rounded-md w-full"
             src="https://i.ibb.co.com/gT09Pkb/Orange-and-Yellow-Professional-Gradient-Pet-Fitness-App-Internal-Communication-Website-1.png"
             alt=""
           />
