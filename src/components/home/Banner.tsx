@@ -15,7 +15,7 @@ const Banner = () => {
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
           <CarosoulCard
-            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8qzarqQ8lfGn90xpA6X3BgTHDEu4lsS407g&s"
+            img="https://i.ibb.co.com/gT09Pkb/Orange-and-Yellow-Professional-Gradient-Pet-Fitness-App-Internal-Communication-Website-1.png"
             title="Explore New Horizons"
             text="Discover the world beyond your comfort zone. Embark on adventures that broaden your perspective and inspire personal growth."
           />
