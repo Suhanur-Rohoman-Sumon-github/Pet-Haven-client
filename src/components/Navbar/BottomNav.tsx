@@ -5,20 +5,21 @@ import { useState } from 'react';
 import { CiShop, CiShoppingTag } from 'react-icons/ci';
 
 const BottomNav = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(true);
+  console.log(toggleMenu);
   return (
-    <div className="relative">
-      <div className="px-5 flex justify-between gap-10 items-center  py-5 bg-white">
+    <div className="relative ">
+      <div className="px-5 lg:px-12 flex justify-between gap-10 items-center  py-5 bg-white">
         <div
           onClick={() => setToggleMenu(!toggleMenu)}
           className="px-5 font-semibold cursor-pointer py-3 flex items-center gap-3 text-xl rounded-md  bg-primary text-white w-fit"
         >
           Shop Categories <FaBars />
         </div>
-        <div className="flex-1 flex items-center ">
+        <div className="flex-1  flex items-center ">
           <Input
             placeholder="search products"
-            className="w-10/12 rounded-e-none py-6"
+            className="w-10/12 bg-slate-100 rounded-e-none py-6"
           />
           <Button className="w-[15%] py-6 bg-primary rounded-s-none">
             Search
@@ -35,7 +36,7 @@ const BottomNav = () => {
       <div
         className={` ${
           toggleMenu ? 'block' : 'hidden'
-        } w-56 bg-white shadow-md p-5 z-10 rounded-md absolute top-[88px] left-5`}
+        } w-56 bg-white shadow-md p-5 transition-all duration-200 z-20 rounded-md absolute top-[88px]  left-12`}
       >
         <ul className="space-y-4">
           <li className="flex items-center gap-1">
