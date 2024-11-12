@@ -1,10 +1,12 @@
-import Banner from "../../../components/home/Banner";
+import Banner from '../../../components/home/Banner';
+import CategorySection from '../../../components/home/CategorySection';
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Banner />
-    </div>
+      <CategorySection />
+    </>
   );
 };
 
