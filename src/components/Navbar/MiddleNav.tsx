@@ -1,5 +1,6 @@
-import { FaUser } from 'react-icons/fa';
-import { FaCartShopping } from 'react-icons/fa6';
+import { FaUser } from "react-icons/fa";
+import { FaCartShopping } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const MiddleNav = () => {
   return (
@@ -13,9 +14,16 @@ const MiddleNav = () => {
         <ul className="flex space-x-4">
           <li>Home</li>
           <li>Catalog</li>
-          <li>All Collection</li>
+          <Link to={"/products"}>
+            {" "}
+            <li>All Collection</li>
+          </Link>
           <li>Sale</li>
           <li>Electronics</li>
+          <Link to={"/about"}>
+            {" "}
+            <li>About us </li>
+          </Link>
         </ul>
       </div>
       <div className="flex gap-8">

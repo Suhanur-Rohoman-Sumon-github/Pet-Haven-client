@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import CarosoulCard from '../Carosoul/CarosoulCard';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import CarosoulCard from "../Carosoul/CarosoulCard";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 // @ts-ignore
-import 'swiper/css';
+import "swiper/css";
 // @ts-ignore
-import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
-import './Banner.css';
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+import "./Banner.css";
 const Banner = () => {
   return (
     <div className="min-h-[80vh] flex justify-center items-center ">

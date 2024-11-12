@@ -1,10 +1,10 @@
-import BottomNav from '../../../components/Navbar/BottomNav';
-import MiddleNav from '../../../components/Navbar/MiddleNav';
-import TopNav from '../../../components/Navbar/TopNav';
+import BottomNav from "../../../components/Navbar/BottomNav";
+import MiddleNav from "../../../components/Navbar/MiddleNav";
+import TopNav from "../../../components/Navbar/TopNav";
 
 const Navbar = () => {
   return (
-    <nav className="bg-primary container">
+    <nav className="bg-primary container mx-auto">
       <TopNav />
       <MiddleNav />
       <hr />

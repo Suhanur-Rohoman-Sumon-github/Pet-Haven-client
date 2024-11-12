@@ -1,7 +1,15 @@
+import { Outlet } from "react-router-dom";
+import Navbar from "../pages/sharedPages/Navbar/Navbar";
+import Footer from "../pages/sharedPages/footer/Footer";
+
 const Main = () => {
   return (
     <div>
-      <h1>this is main layout page</h1>
+      <Navbar />
+      <div className="container mx-auto">
+        <Outlet />
+      </div>
+      <Footer />
     </div>
   );
 };
