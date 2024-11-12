@@ -51,8 +51,8 @@ const CategorySection = () => {
         <div className="grid rounded-md overflow-hidden border border-slate-300  grid-cols-3 md:grid-cols-5 justify-between items-center">
           <div
             onClick={() => setSelectedCategory('Dog')}
-            className={`border-e hover:bg-yellow-500 cursor-pointer  transition-all duration-200 border-slate-300  flex flex-col justify-center items-center h-48 p-5 ${
-              selectedCategory === 'Dog' && 'bg-yellow-500'
+            className={`border-e hover:bg-primary cursor-pointer  transition-all duration-200 border-slate-300  flex flex-col justify-center hover:text-white items-center h-48 p-5 ${
+              selectedCategory === 'Dog' && 'bg-primary text-white'
             }`}
           >
             <FaDog className="text-7xl" />
@@ -60,8 +60,8 @@ const CategorySection = () => {
           </div>
           <div
             onClick={() => setSelectedCategory('Cat')}
-            className={`border-e hover:bg-yellow-500 cursor-pointer  transition-all duration-200 border-slate-300  flex flex-col justify-center items-center h-48 p-5 ${
-              selectedCategory === 'Cat' && 'bg-yellow-500'
+            className={`border-e hover:bg-primary cursor-pointer  transition-all duration-200 border-slate-300  flex flex-col hover:text-white justify-center items-center h-48 p-5 ${
+              selectedCategory === 'Cat' && 'bg-primary text-white'
             }`}
           >
             <FaCat className="text-7xl" />
@@ -69,8 +69,8 @@ const CategorySection = () => {
           </div>
           <div
             onClick={() => setSelectedCategory('Bird')}
-            className={`border-e hover:bg-yellow-500 cursor-pointer  transition-all duration-200 border-slate-300  flex flex-col justify-center items-center h-48 p-5 ${
-              selectedCategory === 'Bird' && 'bg-yellow-500'
+            className={`border-e hover:bg-primary hover:text-white cursor-pointer  transition-all duration-200 border-slate-300  flex flex-col justify-center items-center h-48 p-5 ${
+              selectedCategory === 'Bird' && 'bg-primary text-white'
             }`}
           >
             <LuBird className="text-7xl" />
@@ -78,8 +78,8 @@ const CategorySection = () => {
           </div>
           <div
             onClick={() => setSelectedCategory('Small Animal')}
-            className={` hover:bg-yellow-500 cursor-pointer  transition-all duration-200   flex flex-col justify-center items-center h-48 p-5 ${
-              selectedCategory === 'Small Animal' && 'bg-yellow-500'
+            className={` hover:bg-primary cursor-pointer hover:text-white  transition-all duration-200   flex flex-col justify-center items-center h-48 p-5 ${
+              selectedCategory === 'Small Animal' && 'bg-primary text-white'
             }`}
           >
             <SiAnimalplanet className="text-7xl" />
@@ -87,8 +87,8 @@ const CategorySection = () => {
           </div>
           <div
             onClick={() => setSelectedCategory('Fish')}
-            className={` hover:bg-yellow-500 cursor-pointer  transition-all duration-200   flex flex-col justify-center items-center h-48 p-5 ${
-              selectedCategory === 'Fish' && 'bg-yellow-500'
+            className={` hover:bg-primary cursor-pointer hover:text-white  transition-all duration-200   flex flex-col justify-center items-center h-48 p-5 ${
+              selectedCategory === 'Fish' && 'bg-primary text-white'
             }`}
           >
             <FaFish className="text-7xl" />
