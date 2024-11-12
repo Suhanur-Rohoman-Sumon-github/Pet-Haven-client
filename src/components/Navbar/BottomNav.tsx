@@ -3,10 +3,12 @@ import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import { useState } from 'react';
 import { CiShop, CiShoppingTag } from 'react-icons/ci';
+import { useLocation } from 'react-router-dom';
 
 const BottomNav = () => {
   const [toggleMenu, setToggleMenu] = useState(true);
-  console.log(toggleMenu);
+  const { pathname } = useLocation();
+
   return (
     <div className="relative ">
       <div className="px-5 lg:px-12 flex justify-between gap-10 items-center  py-5 bg-white">
@@ -35,7 +37,7 @@ const BottomNav = () => {
 
       <div
         className={` ${
-          toggleMenu ? 'block' : 'hidden'
+          toggleMenu && pathname !== '/' ? 'block' : 'hidden'
         } w-56 bg-white shadow-md p-5 transition-all duration-200 z-20 rounded-md absolute top-[88px]  left-12`}
       >
         <ul className="space-y-4">
