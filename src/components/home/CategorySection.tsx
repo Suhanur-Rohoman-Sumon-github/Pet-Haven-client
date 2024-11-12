@@ -40,6 +40,30 @@ const CategorySection = () => {
       image:
         'https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-3.jpg',
     },
+    {
+      id: 2,
+      name: 'Dog Tuna Delight',
+      category: 'Dog',
+      price: 24.99,
+      image:
+        'https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-1.jpg',
+    },
+    {
+      id: 3,
+      name: 'Dog Seed Mix',
+      category: 'Dog',
+      price: 15.99,
+      image:
+        'https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-2.jpg',
+    },
+    {
+      id: 4,
+      name: 'Dog Pellets',
+      category: 'Dog',
+      price: 12.99,
+      image:
+        'https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-3.jpg',
+    },
   ];
   const [selectedCategory, setSelectedCategory] = useState('Dog');
   const filteredProducts = selectedCategory
@@ -51,7 +75,7 @@ const CategorySection = () => {
         <div className="grid rounded-md overflow-hidden border border-slate-300  grid-cols-3 md:grid-cols-5 justify-between items-center">
           <div
             onClick={() => setSelectedCategory('Dog')}
-            className={`border-e hover:bg-primary cursor-pointer  transition-all duration-200 border-slate-300  flex flex-col justify-center hover:text-white items-center h-48 p-5 ${
+            className={`border-e  hover:bg-primary cursor-pointer  transition-all duration-200 border-slate-300  flex flex-col justify-center hover:text-white items-center h-48 p-5 ${
               selectedCategory === 'Dog' && 'bg-primary text-white'
             }`}
           >
@@ -98,7 +122,7 @@ const CategorySection = () => {
       </div>
       {/* show products */}
       {filteredProducts && filteredProducts.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {filteredProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}

@@ -76,7 +76,7 @@ const Products = () => {
       {/* Product Display */}
       <div className="flex-1 p-6">
         <h1 className="text-2xl font-bold mb-6">Pet Food Products</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {filteredProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}

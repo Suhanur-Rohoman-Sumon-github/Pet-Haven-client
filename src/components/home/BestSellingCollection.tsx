@@ -74,7 +74,7 @@ const BestSellingCollection = () => {
     <Container>
       <div className="mb-[100px]">
         <h3 className="text-3xl font-semibold">Bestseller Collection</h3>
-        <div className="grid mt-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+        <div className="grid mt-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {petFoodData.slice(0, 8).map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
