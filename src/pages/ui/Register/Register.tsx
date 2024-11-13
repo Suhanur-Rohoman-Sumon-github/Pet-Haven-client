@@ -49,7 +49,7 @@ const Register = () => {
         <div className="lg:w-1/2">
           <img
             className="w-full h-full"
-            src="https://cdni.iconscout.com/illustration/premium/thumb/successful-payment-illustration-download-in-svg-png-gif-file-formats--transaction-online-3d-character-with-different-scene-pack-people-illustrations-1815075.png?f=webp"
+            src="https://cdn3d.iconscout.com/3d/premium/thumb/login-page-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--businessman-submit-form-business-pack-people-illustrations-4165667.png?f=webp"
             alt=""
           />
         </div>
