@@ -24,7 +24,7 @@ const Login = () => {
           <FaArrowLeft /> Back to Home
         </button>
       </Link>
-      <div className="my-12 lg:flex justify-between items-center">
+      <div className="my-12 flex  flex-col-reverse lg:flex-row justify-between items-center">
         <div className="lg:w-1/2">
           <img
             className="w-full"
@@ -32,7 +32,7 @@ const Login = () => {
             alt=""
           />
         </div>
-        <div className="flex justify-center lg:w-2/5 mx-auto items-center ">
+        <div className="flex justify-center w-full lg:w-2/5 mx-auto items-center ">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="bg-white p-8 rounded-lg shadow-md w-full"

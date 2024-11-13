@@ -45,7 +45,14 @@ const Register = () => {
   };
   return (
     <Container>
-      <div className="my-12 lg:flex justify-center gap-10 ">
+      <div className="my-12 lg:flex justify-between gap-10 ">
+        <div className="lg:w-1/2">
+          <img
+            className="w-full h-full"
+            src="https://cdni.iconscout.com/illustration/premium/thumb/successful-payment-illustration-download-in-svg-png-gif-file-formats--transaction-online-3d-character-with-different-scene-pack-people-illustrations-1815075.png?f=webp"
+            alt=""
+          />
+        </div>
         <div className="flex justify-center lg:w-2/5 mx-auto items-center ">
           <form
             onSubmit={handleSubmit(onSubmit)}
