@@ -1,27 +1,29 @@
-import { FaUser } from "react-icons/fa";
-import { FaCartShopping } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { FaUser } from 'react-icons/fa';
+import { FaCartShopping } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 const MiddleNav = () => {
   return (
-    <div className="px-5 flex justify-between items-center  py-8 text-white">
+    <div className="px-5 lg:px-12 flex justify-between items-center bg-primary py-8 text-white">
       <div>
         {/* <Link to="/"> */}
         <h3 className="text-3xl font-semibold">Pet-Haven</h3>
         {/* </Link> */}
       </div>
       <div>
-        <ul className="flex space-x-4">
-          <li>Home</li>
+        <ul className="flex gap-10 font-semibold">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           <li>Catalog</li>
-          <Link to={"/products"}>
-            {" "}
+          <Link to={'/products'}>
+            {' '}
             <li>All Collection</li>
           </Link>
           <li>Sale</li>
           <li>Electronics</li>
-          <Link to={"/about"}>
-            {" "}
+          <Link to={'/about'}>
+            {' '}
             <li>About us </li>
           </Link>
         </ul>
