@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 const BottomNav = () => {
   return (
-    <div className="relative ">
+    <div className="relative  border mb-4">
       <div className="px-5 lg:px-12 flex  gap-10 items-center  py-5 bg-white ">
-        <div className="lg:w-[200px] flex items-center gap-2 border px-4 py-2 rounded-md">
+        <div className="lg:w-[200px] flex items-center gap-2  px-4 py-2 rounded-md">
           <FaWhatsapp className="text-3xl" />{" "}
           <div>
             Whatsapp: <br /> 01403406419

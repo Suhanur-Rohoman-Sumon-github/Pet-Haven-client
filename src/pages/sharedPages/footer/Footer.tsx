@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
-import Container from '../../../components/Container/Container';
-import FeatureSection from '../../../components/home/FeatureSection';
-import NewsletterSection from '../../../components/home/NewsletterSection';
+import { Link } from "react-router-dom";
+import Container from "../../../components/Container/Container";
+import NewsletterSection from "../../../components/home/NewsletterSection";
 import {
   FaEnvelope,
   FaFacebook,
@@ -10,18 +9,18 @@ import {
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaTwitter,
-} from 'react-icons/fa';
-import { GiCheckedShield } from 'react-icons/gi';
-import { RiVerifiedBadgeLine } from 'react-icons/ri';
-import { FaMeta } from 'react-icons/fa6';
+} from "react-icons/fa";
+import { GiCheckedShield } from "react-icons/gi";
+import { RiVerifiedBadgeLine } from "react-icons/ri";
+import { FaMeta } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <>
       <NewsletterSection />
-      <FeatureSection />
+
       <Container>
-        {' '}
+        {" "}
         <hr />
         <footer className=" py-10">
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
