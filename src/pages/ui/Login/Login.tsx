@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Container from '../../../components/Container/Container';
 import { FieldValues, useForm } from 'react-hook-form';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaArrowLeft, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -17,6 +17,13 @@ const Login = () => {
   };
   return (
     <Container>
+      <Link to={'/'}>
+        {' '}
+        <button className="mt-12 button-primary flex items-center gap-2">
+          {' '}
+          <FaArrowLeft /> Back to Home
+        </button>
+      </Link>
       <div className="my-12 lg:flex justify-between items-center">
         <div className="lg:w-1/2">
           <img
