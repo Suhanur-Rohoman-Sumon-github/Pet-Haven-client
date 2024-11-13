@@ -1,12 +1,13 @@
-import { FaWhatsapp } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { FaWhatsapp } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
 const BottomNav = () => {
+  const user = null;
   return (
     <div className="relative  border mb-4">
       <div className="px-5 lg:px-12 flex  gap-10 items-center  py-5 bg-white ">
         <div className="lg:w-[200px] flex items-center gap-2  px-4 py-2 rounded-md">
-          <FaWhatsapp className="text-3xl" />{" "}
+          <FaWhatsapp className="text-3xl" />{' '}
           <div>
             Whatsapp: <br /> 01403406419
           </div>
@@ -15,7 +16,7 @@ const BottomNav = () => {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "text-[#fff] bg-[#f85606] p-2 rounded-md" : "nothing"
+              isActive ? 'text-[#fff] bg-[#f85606] p-2 rounded-md' : 'nothing'
             }
           >
             Home
@@ -23,7 +24,7 @@ const BottomNav = () => {
           <NavLink
             to="/products"
             className={({ isActive }) =>
-              isActive ? "text-[#fff] bg-[#f85606] p-2 rounded-md" : "nothing"
+              isActive ? 'text-[#fff] bg-[#f85606] p-2 rounded-md' : 'nothing'
             }
           >
             Products
@@ -32,7 +33,7 @@ const BottomNav = () => {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              isActive ? "text-[#fff] bg-[#f85606] p-2 rounded-md" : "nothing"
+              isActive ? 'text-[#fff] bg-[#f85606] p-2 rounded-md' : 'nothing'
             }
           >
             About
@@ -40,19 +41,31 @@ const BottomNav = () => {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              isActive ? "text-[#fff] bg-[#f85606] p-2 rounded-md" : "nothing"
+              isActive ? 'text-[#fff] bg-[#f85606] p-2 rounded-md' : 'nothing'
             }
           >
             Contact
           </NavLink>
-          <NavLink
-            to="/dashboard/products"
-            className={({ isActive }) =>
-              isActive ? "text-[#fff] bg-[#f85606] p-2 rounded-md" : "nothing"
-            }
-          >
-            Dashboard
-          </NavLink>
+          {user ? (
+            <NavLink
+              to="/dashboard/products"
+              className={({ isActive }) =>
+                isActive ? 'text-[#fff] bg-[#f85606] p-2 rounded-md' : 'nothing'
+              }
+            >
+              Dashboard
+            </NavLink>
+          ) : (
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'text-[#fff] bg-[#f85606] p-2 rounded-md' : 'nothing'
+              }
+              to="/login"
+            >
+              {' '}
+              Login
+            </NavLink>
+          )}
         </div>
       </div>
     </div>
