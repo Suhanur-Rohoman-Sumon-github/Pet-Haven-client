@@ -1,6 +1,6 @@
-import './Banner.css';
-import Container from '../Container/Container';
-import { Link } from 'react-router-dom';
+import "./Banner.css";
+import Container from "../Container/Container";
+import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <Container>
@@ -54,7 +54,7 @@ const Banner = () => {
         <div className=" w-[calc(100%-14%)]">
           <img
             className="h-[480px] rounded-md w-full"
-            src="https://i.ibb.co.com/gT09Pkb/Orange-and-Yellow-Professional-Gradient-Pet-Fitness-App-Internal-Communication-Website-1.png"
+            src="https://i.ibb.co.com/X7CHyq6/Orange-and-Yellow-Professional-Gradient-Pet-Fitness-App-Internal-Communication-Website-2.png"
             alt=""
           />
         </div>

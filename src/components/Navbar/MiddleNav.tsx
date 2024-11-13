@@ -1,6 +1,6 @@
-import { FaUser } from 'react-icons/fa';
-import { FaCartShopping } from 'react-icons/fa6';
-import { Link } from 'react-router-dom';
+import { FaUser } from "react-icons/fa";
+import { FaCartShopping } from "react-icons/fa6";
+import { Input } from "../ui/input";
 
 const MiddleNav = () => {
   return (
@@ -10,23 +10,12 @@ const MiddleNav = () => {
         <h3 className="text-3xl font-semibold">Pet-Haven</h3>
         {/* </Link> */}
       </div>
-      <div>
-        <ul className="flex gap-10 font-semibold">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>Catalog</li>
-          <Link to={'/products'}>
-            {' '}
-            <li>All Collection</li>
-          </Link>
-          <li>Sale</li>
-          <li>Electronics</li>
-          <Link to={'/about'}>
-            {' '}
-            <li>About us </li>
-          </Link>
-        </ul>
+      <div className="flex-1  flex items-center mx-24">
+        <Input
+          placeholder="search products"
+          className=" bg-slate-100 rounded-e-none py-5"
+        />
+        <button className="button-secondary ml-2">Search</button>
       </div>
       <div className="flex gap-8">
         <div className="flex items-center gap-2">
