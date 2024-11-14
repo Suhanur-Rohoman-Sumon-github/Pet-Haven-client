@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Container from '../../../components/Container/Container';
 import { FieldValues, useForm } from 'react-hook-form';
 import { FaArrowLeft, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useLoginMutation } from '../../../Redux/features/auth/authApis';
+import toast from 'react-hot-toast';
+import { useAppDispatch } from '../../../Redux/hook/hook';
+import { setUser } from '../../../Redux/features/auth/authSlice';
 
 const Login = () => {
   const {
@@ -11,10 +15,21 @@ const Login = () => {
     formState: { errors },
   } = useForm();
   const [showPassword, setShowPassword] = useState(false);
-
+  const [login, { data: loginRes, error }] = useLoginMutation();
+  const dispatch = useAppDispatch();
   const onSubmit = (data: FieldValues) => {
     console.log(data);
+    login(data);
   };
+  console.log(loginRes, error);
+  useEffect(() => {
+    if (loginRes?.success) {
+      toast.success(loginRes?.message);
+      dispatch(
+        setUser({ user: loginRes?.data?.user, token: loginRes?.data?.token })
+      );
+    }
+  }, [loginRes, error, dispatch]);
   return (
     <Container>
       <Link to={'/'}>

@@ -1,11 +1,14 @@
-import { Link } from 'react-router-dom';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import { Link, useNavigate } from 'react-router-dom';
 import Container from '../../../components/Container/Container';
 import { FieldValues, useForm } from 'react-hook-form';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useUserRegisterMutation } from '../../../Redux/features/user/userApis';
+import toast from 'react-hot-toast';
 
 const Register = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -14,7 +17,8 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
   const [isUploading, setIsUploading] = useState(false);
-  const [userRegister, { data: userRes, error }] = useUserRegisterMutation();
+  const [userRegister, { data: userRes, error: errorRes }] =
+    useUserRegisterMutation();
   const imgbbApiKey = '08dea360d9faac6a8de4cf6f88727008'; // Replace with your actual ImgBB API key
 
   const uploadImageToImgBB = async (file: File) => {
@@ -51,7 +55,17 @@ const Register = () => {
     // Submit form data with image URL
     await userRegister(userInfo);
   };
-  console.log(userRes, error);
+  useEffect(() => {
+    if (userRes?.success) {
+      toast.success(userRes?.message);
+
+      navigate('/login');
+    }
+    if (errorRes) {
+      // @ts-ignore
+      toast.error(errorRes?.data?.errorSources[0].message);
+    }
+  }, [userRes, errorRes, navigate]);
   return (
     <Container>
       <div className="my-12 lg:flex justify-between gap-10 ">
