@@ -1,8 +1,9 @@
 import { FaWhatsapp } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import { useAppSelector } from '../../Redux/hook/hook';
 
 const BottomNav = () => {
-  const user = null;
+  const user = useAppSelector(state => state['pet-haven-auth'].user);
   return (
     <div className="relative  border mb-4">
       <div className="px-5 lg:px-12 flex  gap-10 items-center  py-5 bg-white ">
