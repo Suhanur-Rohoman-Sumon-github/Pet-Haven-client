@@ -1,14 +1,12 @@
-import React from "react";
-import { Button } from "./components/ui/button";
+import Navbar from './pages/sharedPages/Navbar/Navbar';
+import Home from './pages/ui/home/Home';
 
 const App = () => {
   return (
-    <div className="flex justify-center items-center">
-      <div>
-        <h1 className="text-red-500 underline ">this is my app bro</h1>
-        <Button>click me</Button>
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <Home />
+    </>
   );
 };
 
