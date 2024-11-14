@@ -1,9 +1,11 @@
 import { FaWhatsapp } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-import { useAppSelector } from '../../Redux/hook/hook';
+import { useAppDispatch, useAppSelector } from '../../Redux/hook/hook';
+import { logout } from '../../Redux/features/auth/authSlice';
 
 const BottomNav = () => {
   const user = useAppSelector(state => state['pet-haven-auth'].user);
+  const dispatch = useAppDispatch();
   return (
     <div className="relative  border mb-4">
       <div className="px-5 lg:px-12 flex  gap-10 items-center  py-5 bg-white ">
@@ -48,14 +50,19 @@ const BottomNav = () => {
             Contact
           </NavLink>
           {user ? (
-            <NavLink
-              to="/dashboard/products"
-              className={({ isActive }) =>
-                isActive ? 'text-[#fff] bg-[#f85606] p-2 rounded-md' : 'nothing'
-              }
-            >
-              Dashboard
-            </NavLink>
+            <>
+              <NavLink
+                to="/dashboard/products"
+                className={({ isActive }) =>
+                  isActive
+                    ? 'text-[#fff] bg-[#f85606] p-2 rounded-md'
+                    : 'nothing'
+                }
+              >
+                Dashboard
+              </NavLink>
+              <button onClick={() => dispatch(logout())}>Logout</button>
+            </>
           ) : (
             <NavLink
               className={({ isActive }) =>

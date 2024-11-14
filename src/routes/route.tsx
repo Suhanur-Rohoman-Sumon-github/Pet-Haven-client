@@ -7,6 +7,7 @@ import Products from '../pages/ui/products/Products';
 import Login from '../pages/ui/Login/Login';
 import Register from '../pages/ui/Register/Register';
 import ProductsDetails from '../pages/ui/ProducDetails/ProductsDetails';
+import Contact from '../pages/ui/contact/Contact';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
       },
       {
         path: '/products',
