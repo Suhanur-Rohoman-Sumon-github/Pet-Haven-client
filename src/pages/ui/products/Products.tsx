@@ -1,41 +1,45 @@
-import ProductCard from "../../../components/Products/ProductCard";
+import ProductCard, {
+  TProduct,
+} from '../../../components/Products/ProductCard';
+import { useGetAllProductsQuery } from '../../../Redux/features/product/productApis';
 
 const Products = () => {
-  const petFoodData = [
-    {
-      id: 1,
-      name: "Premium Dog Food",
-      category: "Dog",
-      price: 29.99,
-      image:
-        "https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-4.jpg",
-    },
-    {
-      id: 2,
-      name: "Cat Tuna Delight",
-      category: "Cat",
-      price: 24.99,
-      image:
-        "https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-1.jpg",
-    },
-    {
-      id: 3,
-      name: "Bird Seed Mix",
-      category: "Bird",
-      price: 15.99,
-      image:
-        "https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-2.jpg",
-    },
-    {
-      id: 4,
-      name: "Small Animal Pellets",
-      category: "Small Animal",
-      price: 12.99,
-      image:
-        "https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-3.jpg",
-    },
-  ];
-
+  // const petFoodData = [
+  //   {
+  //     id: 1,
+  //     name: "Premium Dog Food",
+  //     category: "Dog",
+  //     price: 29.99,
+  //     image:
+  //       "https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-4.jpg",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Cat Tuna Delight",
+  //     category: "Cat",
+  //     price: 24.99,
+  //     image:
+  //       "https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-1.jpg",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Bird Seed Mix",
+  //     category: "Bird",
+  //     price: 15.99,
+  //     image:
+  //       "https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-2.jpg",
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Small Animal Pellets",
+  //     category: "Small Animal",
+  //     price: 12.99,
+  //     image:
+  //       "https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-3.jpg",
+  //   },
+  // ];
+  const { data: prodRes } = useGetAllProductsQuery(undefined);
+  const petFoodData = prodRes?.data;
   return (
     <div className="flex min-h-screen bg-gray-50">
       {/* Sidebar */}
@@ -100,11 +104,15 @@ const Products = () => {
       {/* Product Display */}
       <div className="flex-1 p-6">
         <h1 className="text-2xl font-bold mb-6">Pet Food Products</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-          {petFoodData.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        {petFoodData && petFoodData.length > 0 ? (
+          <div className="grid mt-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            {petFoodData.slice(0, 8).map((product: TProduct) => (
+              <ProductCard key={product._id} product={product} />
+            ))}
+          </div>
+        ) : (
+          <p>No Product found</p>
+        )}
       </div>
     </div>
   );

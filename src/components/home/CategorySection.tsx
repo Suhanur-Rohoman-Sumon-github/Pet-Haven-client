@@ -4,71 +4,19 @@ import Container from '../Container/Container';
 import { SiAnimalplanet } from 'react-icons/si';
 import { LuBird } from 'react-icons/lu';
 import { useState } from 'react';
-import ProductCard from '../Products/ProductCard';
+import ProductCard, { TProduct } from '../Products/ProductCard';
+import { useGetAllProductsQuery } from '../../Redux/features/product/productApis';
 
 const CategorySection = () => {
-  const petFoodData = [
-    {
-      id: 1,
-      name: 'Premium Dog Food',
-      category: 'Dog',
-      price: 29.99,
-      image:
-        'https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-4.jpg',
-    },
-    {
-      id: 2,
-      name: 'Cat Tuna Delight',
-      category: 'Cat',
-      price: 24.99,
-      image:
-        'https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-1.jpg',
-    },
-    {
-      id: 3,
-      name: 'Bird Seed Mix',
-      category: 'Bird',
-      price: 15.99,
-      image:
-        'https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-2.jpg',
-    },
-    {
-      id: 4,
-      name: 'Small Animal Pellets',
-      category: 'Small Animal',
-      price: 12.99,
-      image:
-        'https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-3.jpg',
-    },
-    {
-      id: 2,
-      name: 'Dog Tuna Delight',
-      category: 'Dog',
-      price: 24.99,
-      image:
-        'https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-1.jpg',
-    },
-    {
-      id: 3,
-      name: 'Dog Seed Mix',
-      category: 'Dog',
-      price: 15.99,
-      image:
-        'https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-2.jpg',
-    },
-    {
-      id: 4,
-      name: 'Dog Pellets',
-      category: 'Dog',
-      price: 12.99,
-      image:
-        'https://htmldemo.net/petmark/petmark/image/product/product-details/product-details-3.jpg',
-    },
-  ];
+  const { data: prodRes } = useGetAllProductsQuery(undefined);
+  const petFoodData = prodRes?.data;
   const [selectedCategory, setSelectedCategory] = useState('Dog');
-  const filteredProducts = selectedCategory
-    ? petFoodData.filter(product => product.category === selectedCategory)
-    : petFoodData;
+  const filteredProducts =
+    selectedCategory && petFoodData
+      ? petFoodData.filter(
+          (product: TProduct) => product.category === selectedCategory
+        )
+      : petFoodData;
   return (
     <Container>
       <div className="mt-[80px] mb-12 ">
@@ -121,11 +69,12 @@ const CategorySection = () => {
         </div>
       </div>
       {/* show products */}
-      {filteredProducts && filteredProducts.length > 0 ? (
+      {filteredProducts && filteredProducts?.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-          {filteredProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+          {filteredProducts &&
+            filteredProducts.map((product: TProduct) => (
+              <ProductCard key={product._id} product={product} />
+            ))}
         </div>
       ) : (
         <p className="text-center text-xl font-semibold mt-12">

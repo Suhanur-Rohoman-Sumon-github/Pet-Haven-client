@@ -25,62 +25,62 @@ const TestimonialSection = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <div className="mt-5 h-[200px] ">
-                <div className="flex justify-center items-center gap-3">
+              <div className=" h-auto  p-6 rounded-lg shadow-lg">
+                <div className="flex justify-center items-center gap-4">
                   <img
-                    className="w-20  h-20 rounded-full"
+                    className="w-24 h-24 rounded-full object-cover"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUJ0B-JHTwEkAixyTpWGN-z_P935SmvtiEqA&s"
-                    alt=""
-                  />{' '}
+                    alt="Profile picture of Jhone"
+                  />
                   <div>
-                    <h3 className="font-semibold text-xl">Jhone</h3>
-                    <p>Web Developer</p>
+                    <h3 className="font-bold text-2xl text-gray-800">Jhone</h3>
+                    <p className="text-gray-500">Web Developer</p>
                   </div>
                 </div>
-                <p className="text-center mt-2">
-                  Since switching to Canine Feast, I love knowing that she’s
+                <p className="text-center mt-4 text-gray-700 text-base leading-relaxed">
+                  "Since switching to Canine Feast, I love knowing that she’s
                   getting all-natural ingredients that keep her healthy and
-                  happy
+                  happy."
                 </p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mt-5">
-                <div className="flex justify-center items-center gap-3">
+              <div className=" h-auto  p-6 rounded-lg shadow-lg">
+                <div className="flex justify-center items-center gap-4">
                   <img
-                    className="w-20  h-20 rounded-full"
+                    className="w-24 h-24 rounded-full object-cover"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUJ0B-JHTwEkAixyTpWGN-z_P935SmvtiEqA&s"
-                    alt=""
-                  />{' '}
+                    alt="Profile picture of Jhone"
+                  />
                   <div>
-                    <h3 className="font-semibold text-xl">Jhone</h3>
-                    <p>Web Developer</p>
+                    <h3 className="font-bold text-2xl text-gray-800">Jhone</h3>
+                    <p className="text-gray-500">Web Developer</p>
                   </div>
                 </div>
-                <p className="text-center mt-2">
-                  Since switching to Canine Feast, I love knowing that she’s
+                <p className="text-center mt-4 text-gray-700 text-base leading-relaxed">
+                  "Since switching to Canine Feast, I love knowing that she’s
                   getting all-natural ingredients that keep her healthy and
-                  happy
+                  happy."
                 </p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mt-5">
-                <div className="flex justify-center items-center gap-3">
+              <div className=" h-auto  p-6 rounded-lg shadow-lg">
+                <div className="flex justify-center items-center gap-4">
                   <img
-                    className="w-20  h-20 rounded-full"
+                    className="w-24 h-24 rounded-full object-cover"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUJ0B-JHTwEkAixyTpWGN-z_P935SmvtiEqA&s"
-                    alt=""
-                  />{' '}
+                    alt="Profile picture of Jhone"
+                  />
                   <div>
-                    <h3 className="font-semibold text-xl">Jhone</h3>
-                    <p>Web Developer</p>
+                    <h3 className="font-bold text-2xl text-gray-800">Jhone</h3>
+                    <p className="text-gray-500">Web Developer</p>
                   </div>
                 </div>
-                <p className="text-center mt-2">
-                  Since switching to Canine Feast, I love knowing that she’s
+                <p className="text-center mt-4 text-gray-700 text-base leading-relaxed">
+                  "Since switching to Canine Feast, I love knowing that she’s
                   getting all-natural ingredients that keep her healthy and
-                  happy
+                  happy."
                 </p>
               </div>
             </SwiperSlide>
@@ -88,7 +88,7 @@ const TestimonialSection = () => {
         </div>
 
         <div
-          className="w-full flex-1 rounded-md h-[290px] bg-cover bg-center "
+          className="w-full flex-1 rounded-md h-[340px] bg-cover bg-center "
           style={{
             backgroundImage: `url(https://t3.ftcdn.net/jpg/08/58/52/74/360_F_858527478_ujWghSsTUe68rbqpOHuBeR05eiFSJIs7.jpg)`,
           }}
