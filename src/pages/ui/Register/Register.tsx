@@ -3,6 +3,7 @@ import Container from '../../../components/Container/Container';
 import { FieldValues, useForm } from 'react-hook-form';
 import { ChangeEvent, useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useUserRegisterMutation } from '../../../Redux/features/user/userApis';
 
 const Register = () => {
   const {
@@ -13,7 +14,7 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
   const [isUploading, setIsUploading] = useState(false);
-
+  const [userRegister, { data: userRes, error }] = useUserRegisterMutation();
   const imgbbApiKey = '08dea360d9faac6a8de4cf6f88727008'; // Replace with your actual ImgBB API key
 
   const uploadImageToImgBB = async (file: File) => {
@@ -38,11 +39,19 @@ const Register = () => {
     }
   };
 
-  const onSubmit = (data: FieldValues) => {
-    const formData = { ...data, image: imageUrl };
-    console.log(formData);
+  const onSubmit = async (data: FieldValues) => {
+    const userInfo = {
+      ...data,
+      image: imageUrl,
+      role: 'user',
+      status: 'active',
+      isDeleted: false,
+    };
+
     // Submit form data with image URL
+    await userRegister(userInfo);
   };
+  console.log(userRes, error);
   return (
     <Container>
       <div className="my-12 lg:flex justify-between gap-10 ">
