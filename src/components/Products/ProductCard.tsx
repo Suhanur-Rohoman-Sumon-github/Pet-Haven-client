@@ -1,17 +1,21 @@
 import { FaExchangeAlt, FaHeart } from 'react-icons/fa';
-type TProduct = {
-  id: number;
+import { Link } from 'react-router-dom';
+export type TProduct = {
+  _id: string;
   name: string;
   category: string;
   price: number;
-  image: string; // Assuming the image will be a URL in string format
+  image: string;
+  isDeleted: boolean;
+  details: string;
+  stock: number;
+  rating: number;
 };
+
 const ProductCard = ({ product }: { product: TProduct }) => {
+  console.log(product);
   return (
-    <div
-      key={product.id}
-      className="border rounded-lg overflow-hidden relative group transition-all duration-300 transform "
-    >
+    <div className="border rounded-lg overflow-hidden relative group transition-all duration-300 transform ">
       <img
         src={product.image}
         alt={product.name}
@@ -33,9 +37,12 @@ const ProductCard = ({ product }: { product: TProduct }) => {
       </div>
 
       {/* Add to Cart Button (appears on hover) */}
-      <button className="button-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute bottom-4 left-4 right-4">
-        Add to Cart
-      </button>
+      <Link to={`/products/${product._id}`}>
+        {' '}
+        <button className="button-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute bottom-4 left-4 right-4">
+          Details
+        </button>
+      </Link>
     </div>
   );
 };
