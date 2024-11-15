@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const AboutBanner = () => {
   return (
     <div
@@ -18,6 +20,11 @@ const AboutBanner = () => {
             top-quality pet food, toys, or expert advice, we have everything you
             need to keep your pets happy and healthy.
           </p>
+          <div className="flex justify-center items-center mt-5">
+            <Link to="/products">
+              <button className="button-secondary">Shop Now</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

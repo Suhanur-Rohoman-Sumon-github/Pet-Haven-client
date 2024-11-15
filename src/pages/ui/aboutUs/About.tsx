@@ -1,4 +1,5 @@
 import AboutBanner from '../../../components/about/AboutBanner';
+import OurMission from '../../../components/about/OurMission';
 import Container from '../../../components/Container/Container';
 import { Button } from '../../../components/ui/button';
 
@@ -6,44 +7,8 @@ const About = () => {
   return (
     <Container>
       <AboutBanner />
-
+      <OurMission />
       <div className="font-sans text-gray-900">
-        {/* Introduction Section */}
-
-        {/* Our Mission Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-semibold text-gray-800">
-              Our Mission
-            </h3>
-            <p className="mt-4 text-lg text-gray-600">
-              Our mission is to offer premium pet supplies, expert care, and
-              community support to ensure that every pet leads a happy, healthy
-              life.
-            </p>
-            <div className="mt-8 flex justify-center space-x-6">
-              <div className="bg-blue-100 p-6 rounded-lg shadow-md">
-                <h4 className="text-xl font-semibold text-gray-800">
-                  Pet Care
-                </h4>
-                <p className="text-gray-600">
-                  We offer expert advice and premium products for your pet’s
-                  health and happiness.
-                </p>
-              </div>
-              <div className="bg-blue-100 p-6 rounded-lg shadow-md">
-                <h4 className="text-xl font-semibold text-gray-800">
-                  Community Support
-                </h4>
-                <p className="text-gray-600">
-                  We believe in fostering a pet-loving community to share
-                  experiences and advice.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Our Team Section */}
         <section className="bg-gray-50 py-16">
           <div className="max-w-4xl mx-auto text-center">

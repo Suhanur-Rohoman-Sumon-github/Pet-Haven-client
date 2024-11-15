@@ -1,6 +1,16 @@
-import "./Banner.css";
-import Container from "../Container/Container";
-import { Link } from "react-router-dom";
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import './Banner.css';
+import Container from '../Container/Container';
+import { Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+// @ts-ignore
+import 'swiper/css';
+// @ts-ignore
+import 'swiper/css/pagination';
+// import required modules
+import { Autoplay, Pagination } from 'swiper/modules';
 const Banner = () => {
   return (
     <Container>
@@ -52,11 +62,41 @@ const Banner = () => {
           </ul>
         </div>
         <div className=" w-[calc(100%-14%)]">
-          <img
-            className="h-[480px] rounded-md w-full"
-            src="https://i.ibb.co.com/X7CHyq6/Orange-and-Yellow-Professional-Gradient-Pet-Fitness-App-Internal-Communication-Website-2.png"
-            alt=""
-          />
+          <Swiper
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            pagination={true}
+            modules={[Pagination, Autoplay]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              {' '}
+              <img
+                className="h-[480px] rounded-md w-full"
+                src="/public/banner2.jpeg"
+                alt=""
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              {' '}
+              <img
+                className="h-[480px] rounded-md w-full"
+                src="https://i.ibb.co.com/X7CHyq6/Orange-and-Yellow-Professional-Gradient-Pet-Fitness-App-Internal-Communication-Website-2.png"
+                alt=""
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              {' '}
+              <img
+                className="h-[480px] rounded-md w-full"
+                src="https://static.vecteezy.com/system/resources/thumbnails/051/955/242/small_2x/a-dog-sitting-beside-a-large-pile-of-dog-food-looking-curiously-at-the-viewer-photo.jpg"
+                alt=""
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </Container>
